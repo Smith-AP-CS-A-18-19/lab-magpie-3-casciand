@@ -1,3 +1,7 @@
+/*
+Andrew Cascio
+*/
+
 /**
  * A program to carry on conversations with a human user.
  * This version:
@@ -39,6 +43,22 @@ public class Magpie3 {
 				   || findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}	else if (findKeyword(statement, "dog") >= 0
+					 || findKeyword(statement, "cat") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		} else if (findKeyword(statement, "Mr. Smith") >=0)
+		{
+			response = "He sounds like a cool guy.";
+		} else if (findKeyword(statement, "school") >= 0)
+		{
+			response = "Where do you attend school?";
+		} else if (findKeyword(statement, "tired") >= 0)
+		{
+			response = "You should get some rest.";
+		} else if (findKeyword(statement, "hungry") >= 0)
+		{
+			response = "What is your favorite food?";
 		} else {
 			response = getRandomResponse();
 		}
